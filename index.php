@@ -19,7 +19,7 @@
     
         echo "</br >También podemos decir que.... El nombre del usuario es <strong>$nombre</strong>. Esto es sin concatenación </br></br>"; //Imprime o muestra un valor en pantalla de una manera màs eficiente para la memoria RAM
         
-        dameDatos(); //Ejecutar una función
+        dameDatos(); //Ejecutar una función expresada
     
         function dameNombre() {
             
