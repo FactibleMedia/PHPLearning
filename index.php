@@ -45,5 +45,11 @@
         incrementoValor();
     ?>
     
+    <?php
+        
+        define("AUTOR","Fez", true); // Nombre de la constante, el valor de la constante y true o false para decirle que no discrimine si laconstante se escribe con mayusculas o minusculas.
+        echo "El autor es " . AUTOR;
+    ?>
+    
 </body>
 </html>
