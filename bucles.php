@@ -22,11 +22,11 @@
     
         echo "Hemos salido del bucle"; */
         
-        for($i=1;$i<=10;$i++) {
+        for($i=1000;$i>=0;$i--) {
             
-            //echo " Diego no entiende PHP cuando dice que mi código está mal! "; // Bucle
+            echo " Diego no entiende PHP cuando dice que mi código está mal! "; // Bucle
         
-            echo "9 x $i = " . 9*$i . "</br>"; // Tabla de multiplicar del 9 
+            //echo "9 x $i = " . 9*$i . "</br>"; // Tabla de multiplicar del 9 
             
             
         }
