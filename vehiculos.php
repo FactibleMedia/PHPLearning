@@ -32,9 +32,13 @@
 
     class Camion { // Ejemplo de declaración de clases
                 
-        var $llantas; // Ejemplo de propiedad o atributo de una clase.
+        // var $llantas; // Estado Original. PHP entiende que el modificiador de acceso es "public"
+        //private $llantas; // Con el modificador de acceso "private" encapsulamos la variable ruedas para que sólo sea accesible desde la propia clase.
+        // public $llantas; // Con el modificador de acceso "public" encapsulamos la variable ruedas para que sea accesible desde cualquier clase, es igual si no se coloca public y se colocoa var, PHP entiende que es public.
+        protected $llantas; // Con el modificador de acceso "protected" encapsulamos la variable ruedas para que sólo sea accesible desde la propia clase o clases heredadas.
+        
         var $color;
-        var $motor;
+        var $motor; // Ejemplo de propiedad o atributo de una clase.
             
         function Camion() {// Todos los objetos en programación oriendada a objetos deben tenr un estado inicial, este estado inicial es un "constructor" que es una función especial, esta lleva el mismo nombre de la clase, por lo tanto podríamos decir que es un Método Constructor.
             
@@ -42,6 +46,10 @@
             $this->color="";
             $this->motor=4600;
         } // Si se omite la declaración del constructor se crea un constructor por defecto o vacío.
+        
+        function get_llantasCam () { // Método GETTER para obtener el valor de la variable "private".
+            return $this->llantas;
+        }
             
         function arrancar() { // Cuando dentro de una clase se crea una función, se crea un método (esto es una funcionalidad del objeto).
             echo "Estoy arrancando </br><br>";
@@ -65,10 +73,14 @@
             
         function Moto() { // CONSTRUCTOR
             
-            $this->llantas=2;
+            $this->llantas=2; 
             $this->color="";
             $this->motor=600;
         }
+        
+        /* function get_llantasMot () { // Método GETTER para obtener el valor de la variable "private" en la súper clase.
+            return $this->llantas;
+        } */
         
         function arrancar() {
             parent::arrancar();

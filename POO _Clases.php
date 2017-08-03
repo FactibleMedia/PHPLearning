@@ -20,9 +20,9 @@
         
         $TruckBMW->girar(); // Hacemos una llamada a un método dentro de la clase para que el objeto o instancia realice esa tarea.
     
-        echo "El camión BMW tiene " . $TruckBMW->llantas . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.
-    
         echo "El auto BMW tiene " . $CarBMW->llantas . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.
+    
+        echo "El camión BMW tiene " . $TruckBMW->get_llantasCam() . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase a través de un método GETTER (get_llantasCam), el "echo" es para que responda cual es el valor de la propiedad.
     
         $Audi->set_color("Negro", "Audi");
     
@@ -33,6 +33,8 @@
         $kawasaki->arrancar(); // 
     
         $kawasaki->set_color("Negro", "Kawasaki");
+    
+        echo "la Moto Kawasaki tiene " . $kawasaki->get_llantasCam() . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.    
     
     ?>
 </body>
