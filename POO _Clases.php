@@ -34,7 +34,33 @@
     
         $kawasaki->set_color("Negro", "Kawasaki");
     
-        echo "la Moto Kawasaki tiene " . $kawasaki->get_llantasCam() . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.    
+        echo "la Moto Kawasaki tiene " . $kawasaki->get_llantasCam() . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.
+    
+    
+        //
+    
+        
+        include("POO_Concesionario.php");
+    
+        Compra_vehiculo::$descuento = 600000;
+    
+        $compra_Fede = new Compra_vehiculo("compacto");
+    
+        $compra_Fede->climatizador();
+    
+        $compra_Fede->tapiceria("blanco");
+    
+        echo $compra_Fede->precio_final() . "</br></br>";
+    
+        
+        $compra_Ash = new Compra_vehiculo("compacto");
+    
+        $compra_Ash->climatizador();
+    
+        $compra_Ash->tapiceria("rojo");
+    
+        echo $compra_Ash->precio_final() . "</br></br>";
+        
     
     ?>
 </body>
