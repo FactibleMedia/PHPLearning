@@ -4,7 +4,7 @@
         
         private $precio_base;
         
-        static $descuento=450000;
+        private static $descuento=0;
         
         function Compra_vehiculo($gama) { // Constructor
             
@@ -21,6 +21,15 @@
                 $this->precion_base=3000000;
             }
         } // Fin constructor
+        
+        static function descuentoGob(){
+            
+            if(date("m-d-y")>"08-01-2017") {
+                self::$descuento=450000;    
+            }
+            
+            
+        }
         
         function climatizador(){
             
@@ -45,14 +54,14 @@
                 
             }else{
                 
-                $this->precio_base+=500000;
+                $this->precio_base+=100000;
                 
             }
         }
         
         function precio_final(){
             
-            $valor_final=$this->precio_base - self::$descuento;
+            $valor_final=$this->precio_base - self::$descuento; // El self:: es un método que te ayuda a referenciar una variable estática.
             
             return $valor_final;
             

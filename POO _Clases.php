@@ -37,12 +37,13 @@
         echo "la Moto Kawasaki tiene " . $kawasaki->get_llantasCam() . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.
     
     
-        //
-    
+
+    // VARIABLES ESTÁTICAS 
+
         
         include("POO_Concesionario.php");
     
-        Compra_vehiculo::$descuento = 600000;
+        // Compra_vehiculo::$descuento = 600000;
     
         $compra_Fede = new Compra_vehiculo("compacto");
     
@@ -50,7 +51,7 @@
     
         $compra_Fede->tapiceria("blanco");
     
-        echo $compra_Fede->precio_final() . "</br></br>";
+        echo "El precio final de la compra para Fede es " . $compra_Fede->precio_final() . "</br></br>";
     
         
         $compra_Ash = new Compra_vehiculo("compacto");
@@ -59,9 +60,19 @@
     
         $compra_Ash->tapiceria("rojo");
     
-        echo $compra_Ash->precio_final() . "</br></br>";
-        
+        // Compra_vehiculo::$descuento = 1000000;
     
+        Compra_vehiculo::descuentoGob(); // A través de ésta sintaxis se accede a un método estático.
+    
+        echo "El precio final de la compra para Ash es " . $compra_Ash->precio_final() . "</br></br>";
+    
+    
+    // ARRAYS
+    
+        include("POO_Arrays.php");
+    
+        
+        
     ?>
 </body>
 </html>
