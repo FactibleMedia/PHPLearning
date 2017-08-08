@@ -28,7 +28,7 @@
                 self::$descuento=450000;    
             }
             
-            
+
         }
         
         function climatizador(){

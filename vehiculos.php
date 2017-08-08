@@ -69,7 +69,7 @@
         }
     }
 
-    class Moto extends Camion { // HERENCIA EN CLASES
+    class Moto extends Camion { // HERENCIA EN CLASES: Hereda de una súper clase o clase padre todos las proìedades y funcionalidades.
             
         function Moto() { // CONSTRUCTOR
             
@@ -83,7 +83,7 @@
         } */
         
         function arrancar() {
-            parent::arrancar();
+            parent::arrancar(); //Se ejecuta una función desde la súper clase.
             echo "La moto arrancó! </br></br>";
         }
         

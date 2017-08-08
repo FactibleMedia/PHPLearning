@@ -17,7 +17,7 @@
             echo "La comparación NO Coincide, la condición es verdadera";
         }else{
             echo "La comparación Coincide, la condición es falsa";
-        }  
+        }
     
         // echo "El resultado es $resultado";
         

@@ -14,7 +14,7 @@
             echo "Cu&iacutedate";
         } */
         
-        /* echo $nombre=="Fez" && $edad=="lalilulelo" ? "Puedes acceder" : "No Puedes acceder"; */  // Línea de trabajo del condiional ternario
+        /* echo $nombre=="Fez" && $edad=="lalilulelo" ? "Puedes acceder" : "No Puedes acceder"; */  // Línea de trabajo del condicional ternario
         
         /* switch (true) { // Cuando es con llaves
             
@@ -33,11 +33,11 @@
                 echo "Usuario NO Autorizado. Eres menor";
                 break;
         
-        case $nombre=="Fez" && $edad<=35:
+            case $nombre=="Fez" && $edad<=35:
                 echo "Usuario Autorizado. Eres jóven bienvenido";
                 break;
         
-        case $nombre=="Fez" && $edad<=65:
+            case $nombre=="Fez" && $edad<=65:
                 echo "Usuario Autorizado. Eres maduro, ya eres vieja guadia";
                 break;
                 
