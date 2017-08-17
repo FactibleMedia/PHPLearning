@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>MYSQL - Conexión BD</title>
+    
+    
+    <style>
+        table { background-color: black; margin: auto; }
+        td { border: 1px solid black; width: 120px; background-color: #fff; font-family: 'Consolas', Arial, sans-serif; }
+    </style>
 </head>
 <body>
     <?php
+        
         // Conectarse a PHPmyAdmin con xampp en la terminal: cd /Applications/XAMPP/xamppfiles/bin;./mysql --user=root --password= 
-        
-        // Para conectarse a una base de datos se capturan los datos de la base de datos
-        
-        $db_host="localhost";
-        $db_name="bd_test";
-        $db_user="root";
-        $db_pass="";
+    
+        require("MySQL_connection.php");
     
         // Conexión por Procedimientos
     
@@ -26,25 +28,30 @@
             exit();    // La función exit sirve para salir del código actual o terminarlo.
         }
     
-        mysqli_select_db ($db_connect, $db_name) or die ("No se encuentra la Base de Datos"); //
+        mysqli_select_db ($db_connect, $db_name) or die ("No se encuentra la Base de Datos"); // Conecta y selecciona una BD
     
-        mysqli_set_charset($db_connect, "utf8");
+        mysqli_set_charset($db_connect, "utf8"); // Permite usar la codificación UTF8 para mostrar caracteres latinos en el navegador al consultar la BD.
     
-        $db_query = "SELECT * FROM datos_personales"; // Sentencia de consulta a la bd con Mysql
+        $db_query = "SELECT * FROM productos WHERE Importado='Verdadero'"; // Sentencia de consulta a la bd con Mysql
     
-        $db_qresults = mysqli_query($db_connect, $db_query); // result set.
+        $db_qresults = mysqli_query($db_connect, $db_query); // result set / record set.
         
         while($row=mysqli_fetch_row($db_qresults)) { // Leer y mostrar en pantalla el Array del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
         
-            echo $row[0] . " ";
-            echo $row[1] . " ";
-            echo $row[2] . " ";
-            echo $row[3] . " </br>";
-            
+            echo "<table><tr>";
+            echo "<td>" . $row[0] . "</td>";
+            echo "<td>" . $row[1] . "</td>";
+            echo "<td>" . $row[3] . "</td>";
+            echo "<td>" . $row[4] . "</td>";
+            echo "<td>" . $row[5] . "</td>";
+            echo "<td>" . $row[6] . "</td>";
+            echo "</tr></table>";
         }
     
         mysqli_close($db_connect);
-
+        
+        // CREATE TABLE PRODUCTOS
+        
     ?>
 </body>
 </html>
