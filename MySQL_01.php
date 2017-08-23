@@ -7,7 +7,7 @@
     
     <style>
         table { background-color: black; margin: auto; }
-        td { border: 1px solid black; width: 120px; background-color: #fff; font-family: 'Consolas', Arial, sans-serif; }
+        td { border: 1px solid black; width: 120px; background-color: #fff; font-family: 'Consolas', Arial, sans-serif;font-size: 14px; }
     </style>
 </head>
 <body>
@@ -32,21 +32,38 @@
     
         mysqli_set_charset($db_connect, "utf8"); // Permite usar la codificación UTF8 para mostrar caracteres latinos en el navegador al consultar la BD.
     
-        $db_query = "SELECT * FROM productos WHERE Importado='Verdadero'"; // Sentencia de consulta a la bd con Mysql
+        $db_query = "SELECT * FROM productos WHERE nombrearticulo LIKE '%'"; // Sentencia de consulta a la bd con Mysql
     
         $db_qresults = mysqli_query($db_connect, $db_query); // result set / record set.
+    
+        /* echo "<table>";
         
         while($row=mysqli_fetch_row($db_qresults)) { // Leer y mostrar en pantalla el Array del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
-        
-            echo "<table><tr>";
-            echo "<td>" . $row[0] . "</td>";
-            echo "<td>" . $row[1] . "</td>";
-            echo "<td>" . $row[3] . "</td>";
-            echo "<td>" . $row[4] . "</td>";
-            echo "<td>" . $row[5] . "</td>";
-            echo "<td>" . $row[6] . "</td>";
-            echo "</tr></table>";
+            
+            echo "<tr>";    
+            
+            for($i=0;$i<count($row);$i++){ // Recorriendo el Array
+                $table_data=strtolower($row[$i]); // Pasando los datos del array a minúsculas
+                echo "<td>" . ucwords($table_data) . "</td>"; // Mostrando los datos del Array y pasándolos a letra capital
+            };
+            
+            echo "</tr>";
         }
+    
+        echo "</table>"; */
+    
+        echo "<table>";
+        
+        while($row=mysqli_fetch_array($db_qresults, MYSQL_ASSOC)) { // Leer y mostrar en pantalla el Array ASOCIATIVO del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
+            
+            echo "<tr>";    
+            echo "<td>" . $row['CODART'] . "</td>";
+            echo "<td>" . $row['NOMBREARTICULO'] . "</td>";
+            echo "<td>" . $row['IMPORTADO'] . "</td>";
+            echo "</tr>";
+        }
+    
+        echo "</table>";
     
         mysqli_close($db_connect);
         

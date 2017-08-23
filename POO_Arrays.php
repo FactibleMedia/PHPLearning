@@ -49,7 +49,7 @@
     
     echo $alimentos["Carne"]["Vacuna"] . "</br></br>";
 
-    /* foreach($alimentos as $tipo_alimento => $clase_tipo_alimento) { // Este método es desarrollado para desglosar y mostrar en pantalla un array de 2 dimensiones.
+    foreach($alimentos as $tipo_alimento => $clase_tipo_alimento) { // Este método es desarrollado para desglosar y mostrar en pantalla un array de 2 dimensiones.
         
         echo "El tipo de alimento es $tipo_alimento, sus clases y su procedencia son las siguientes:</br>";
         
@@ -61,7 +61,7 @@
         
         echo "</br>";
         
-    } */
+    }
 
     echo var_dump($alimentos);
 
