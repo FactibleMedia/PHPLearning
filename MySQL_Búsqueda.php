@@ -14,7 +14,7 @@
 </head>
 <body>
    
-   <?php
+   <?php // Método php para generar un campo de busqueda a una base de datos y develva los valores requeridos según el query establecido dentro de la función "execute_query" dentro del archivo "MySQL_searchpage.php"
         $thesearch=$_GET["search"];
         $same_page=$_SERVER["PHP_SELF"];
         if($thesearch!=NULL) {
