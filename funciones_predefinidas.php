@@ -9,7 +9,7 @@
     
         $name = "Fez </br></br>";
     
-        echo (strtolower($name)); // Función anidada (En este caso ambas predefinidas) que convierte los strings a minúsculas o en su caso contrario podemos usar strtoupper
+        echo (strtoupper($name)); // Función anidada (En este caso ambas predefinidas) que convierte los strings a minúsculas o en su caso contrario podemos usar strtoupper
     
         
         function suma($num1, $num2) {
@@ -19,7 +19,7 @@
             return $resultado . "</br></br>"; // La función "return" retorna un valor pero no lo devuelve en pantalla
         }
     
-        echo suma(2,3); // Ejecutando una función con paso de parametros.
+        echo suma(5396,8927); // Ejecutando una función con paso de parametros.
     
         
         function frase_mayus($frase, $conversion=true) { // En el segundo parámetro de la función se declara un parámetro/argumento por defecto, no todos los lenguajes soportan esta función.

@@ -10,7 +10,7 @@
     
         $resultado=(int)$num1; // Se convierte la variable tipo string en una de tipo entero o int. PHP reconoce por medio del método "Casting Explícito".
     
-        // El "Casting implícito" es natural en PHP y lo ejecuta de manera dinámica según el contexto, el tipo de dato que se escribe.
+        // El "Casting implícito" es natural en PHP y lo ejecuta de manera dinámica según el contexto a el tipo de dato que se escribe.
     
         echo $resultado;
         

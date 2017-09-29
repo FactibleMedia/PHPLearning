@@ -7,11 +7,11 @@
 <body>
     <p>&nbsp;</p>
     <form name="form1" method="post" action="">
-        <label for="num1"></label>
+        <label for="num1">Número 1</label>
         <input type="text" name="num1" id="num1">
-        <label for="num2"></label>
+        <label for="num2">Número 2</label>
         <input type="text" name="num2" id="num2">
-        <label for="operación"></label>
+        <label for="operación">Operaci&oacute;n</label>
         <select name="operacion" id="operacion">
             <option>Suma</option>
             <option>Resta</option>

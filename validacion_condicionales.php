@@ -7,7 +7,7 @@
         /* if($edad <= 18) {
             echo "Eres menor de edad";
         }else if($edad <= 40){
-            echo "Eres jóven";
+            echo "Eres jóven"; 
         }else if($edad <= 65){
             echo "Eres maduro";
         }else{
@@ -24,7 +24,7 @@
                 
             default:
                 echo "No puedes entrar, no estás autorizado";
-                // No hace poner el "break;" en éste caso!!
+                // No hace falta poner el "break;" en éste caso!!
         } */
         
         switch (true) : // Cuando es con dos puntos
@@ -43,12 +43,9 @@
                 
             default:
                 echo "No puedes entrar, no estás autorizado";
-                // No hace poner el "break;" en éste caso!!
+                // No hace falta poner el "break;" en éste caso!!
         endswitch;
         
     }
-
-    
-    
 
 ?>
