@@ -9,7 +9,7 @@
     
         $name = "Fez </br></br>";
     
-        echo (strtoupper($name)); // Función anidada (En este caso ambas predefinidas) que convierte los strings a minúsculas o en su caso contrario podemos usar strtoupper
+        echo (strtolower($name)); // Función anidada (En este caso ambas predefinidas) que convierte los strings a minúsculas o en su caso contrario podemos usar strtoupper
     
         
         function suma($num1, $num2) {
@@ -39,7 +39,7 @@
             return $resultado ."</br></br>"; // Se devuelve el valor
         }
     
-        echo frase_mayus("federico"); // Se imprime en pantalla la función con un sólo o con los 2 parámetros (El segundo puede ser false, ya que originalmente era true)
+        echo frase_mayus("fEdeRicO"); // Se imprime en pantalla la función con un sólo o con los 2 parámetros (El segundo puede ser false, ya que originalmente era true)
     
         
         function incrementa(&$valor1) { // Se declara la función con un argumento por referencia, en este caso el argumento referenciado crea un vínculo con variables o valores externos fuera de la función y además permite que esos valores sean afectados por lo que se encuentra dentro de la función. Si el parámetro se declara por valor el resultado del programa muestra el 6 y luego el 5

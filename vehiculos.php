@@ -26,7 +26,7 @@
             
         function set_color($color_auto,$name_auto) {
             $this->color=$color_auto;
-            echo "El color del " . $name_auto . " es " . $this->color . "</br></br>";
+            echo "El color del " . $name_auto . " es " . $this->color . "</br></br>"; 
         }
     }
 
@@ -34,7 +34,7 @@
                 
         // var $llantas; // Estado Original. PHP entiende que el modificiador de acceso es "public"
         //private $llantas; // Con el modificador de acceso "private" encapsulamos la variable ruedas para que sólo sea accesible desde la propia clase.
-        // public $llantas; // Con el modificador de acceso "public" encapsulamos la variable ruedas para que sea accesible desde cualquier clase, es igual si no se coloca public y se colocoa var, PHP entiende que es public.
+        // public $llantas; // Con el modificador de acceso "public" encapsulamos la variable ruedas para que sea accesible desde cualquier clase, es igual si no se coloca public y se coloca var, PHP entiende que es public.
         protected $llantas; // Con el modificador de acceso "protected" encapsulamos la variable ruedas para que sólo sea accesible desde la propia clase o clases heredadas.
         
         var $color;
@@ -56,7 +56,7 @@
         } 
             
         function girar() {
-            echo "Estoy girando </br><br>";
+            echo "Estoy girando ahora</br><br>";
         }
             
         function frenar() {

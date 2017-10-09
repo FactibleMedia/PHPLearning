@@ -3,7 +3,6 @@
     class Compra_vehiculo {
         
         private $precio_base;
-        
         private static $descuento=0;
         
         function Compra_vehiculo($gama) { // Constructor
@@ -27,8 +26,6 @@
             if(date("m-d-y")>"08-01-2017") {
                 self::$descuento=450000;    
             }
-            
-
         }
         
         function climatizador(){
@@ -67,8 +64,5 @@
             
         }
     }
-
-
-
 
 ?>

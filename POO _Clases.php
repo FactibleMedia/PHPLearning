@@ -7,6 +7,8 @@
 <body>
     <?php
     
+        echo "LECCIÓN CLASES" . "</br></br>";
+    
         include("vehiculos.php");
     
         $Audi = new Coche(); // Ejemplo de Instancia de la clase "Coche". Con esto se le da un estado inicial al objeto o instancia de ese objeto.
@@ -34,11 +36,13 @@
     
         $kawasaki->set_color("Negro", "Kawasaki");
     
-        echo "la Moto Kawasaki tiene " . $kawasaki->get_llantasCam() . " llantas <br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.
+        echo "la Moto Kawasaki tiene " . $kawasaki->get_llantasCam() . " llantas <br><br><br>"; // Hacemos una llamada una propiedad del objeto o instancia dentro de la clase, el "echo" es para que responda cual es el valor de la propiedad.
     
     
 
     // VARIABLES ESTÁTICAS 
+        
+        echo "LECCIÓN VARIABLES ESTÁTICAS" . "</br></br>";
 
         
         include("POO_Concesionario.php");
@@ -64,10 +68,12 @@
     
         Compra_vehiculo::descuentoGob(); // A través de ésta sintaxis se accede a un método estático.
     
-        echo "El precio final de la compra para Ash es " . $compra_Ash->precio_final() . "</br></br>";
+        echo "El precio final de la compra para Ash es " . $compra_Ash->precio_final() . "</br></br></br>";
     
     
     // ARRAYS
+    
+        echo "LECCIÓN ARRAYS" . "</br></br>";
     
         include("POO_Arrays.php");
     

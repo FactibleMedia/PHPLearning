@@ -18,7 +18,7 @@
         echo "Es un array";
     }else{
         echo "No es un array";
-    };*/ 
+    };*/  
 
     echo "El día de la semana es el " . $semana[3] . "</br></br>"; // Mostrando en pantalla un array indexado.
 
@@ -64,12 +64,6 @@
     }
 
     echo var_dump($alimentos);
-
-    
-    
-        
-        
-        
         
         //asdsad
 ?>
