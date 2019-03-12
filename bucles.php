@@ -24,7 +24,7 @@
         
          for($i=500;$i>=0;$i--) {
             
-            echo " Diego no entiende PHP cuando dice que mi código está mal! /"; // Bucle
+            echo "<strong>Cynthia</strong> está muy peresoza ya ni se quiere peinar la cabeza! /"; // Bucle
         
             //echo "9 x $i = " . 9*$i . "</br>"; // Tabla de multiplicar del 9    
             

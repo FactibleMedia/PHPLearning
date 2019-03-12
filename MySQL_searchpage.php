@@ -27,7 +27,7 @@
 
             echo "<table>";
 
-            while($row=mysqli_fetch_row($db_qresults)) { // Leer y mostrar en pantalla el Array del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
+            while($row=mysqli_fetch_row($db_qresults)) { // Leer y mostrar en pantalla el Array del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos. 
 
                 echo "<tr>";    
 

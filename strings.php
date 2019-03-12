@@ -8,15 +8,15 @@
    <?php
         $variable1 = "fez";
         $variable2 = "FEZ";
-        $resultado = strcasecmp($variable1, $variable2);
+        $resultado = strcmp($variable1, $variable2);
     
         //strcmp compara si son distintas incluyendo las mayúsculas.
         //strcasecmp compra sin son distintas indiferentemente de las mayúsculas.
     
         if($resultado) {
-            echo "La comparación NO Coincide, la condición es verdadera";
+            echo "El resultado de la comparación arrioja que NO es igual o NO coincide, la condición strcmp es verdadera";
         }else{
-            echo "La comparación Coincide, la condición es falsa";
+            echo "El resultado de la comparación arroja que es Igual o Coincide, la condición es strcmp es falsa";
         }
     
         // echo "El resultado es $resultado";
