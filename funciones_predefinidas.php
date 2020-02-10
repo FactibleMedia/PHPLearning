@@ -54,8 +54,8 @@
         echo incrementa($numero) . "</br>";
     
         echo $numero . "</br></br>";
-    
-    
+
+        
         function cambiaa_mayus(&$param) {
             
             $param = strtolower($param);

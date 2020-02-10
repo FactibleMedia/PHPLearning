@@ -1,8 +1,3 @@
-<style>
-        table { border: 1px solid #000; }
-        td { border: 1px solid #000; }
-    </style>
-     
 <?php
         
     // Conectarse a PHPmyAdmin con xampp en la terminal: cd /Applications/XAMPP/xamppfiles/bin;./mysql --user=root --password= 

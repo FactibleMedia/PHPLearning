@@ -3,7 +3,7 @@
     class Compra_vehiculo {
         
         private $precio_base;
-        private static $descuento=0;
+        private static $descuento=0; // Un método es estático cuando pertenece únicamente a la clase donde se ha creado. Las subclases u instancias/objetos creados a partir de la clase No tienen copia de este método. En cambio el metodo pasa a ser compartido con todos los objetos; es decir no hace una copia del método por herencia a ningùn objeto sino que se los comparte.
         
         function Compra_vehiculo($gama) { // Constructor
             
@@ -23,7 +23,7 @@
         
         static function descuentoGob(){
             
-            if(date("m-d-y")>"08-01-2017") {
+            if(date("m-d-y")>"01-01-2020") {
                 self::$descuento=450000;    
             }
         }

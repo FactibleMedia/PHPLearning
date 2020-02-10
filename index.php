@@ -10,8 +10,10 @@
 </head>
 <body>
     <?php
-        $nombre = "Fez"; //Variable String  
-        $edad = 18; //Variable Número
+        $nombre = "Fez"; //Variable String - no empezar una variable con carácteres numericos.
+        $nombre = "Federico";
+    
+        $edad = 36; //Variable Número
         print "El nombre del usuario es " . $nombre . ". Esto es concatenación</br>"; //Imprime o muestra un valor en pantalla pero gasta más memoria que un "echo" al retornar un valor de 1 desde la memoria.
         print "y la edad es " . $edad ."</br></br>";        
     

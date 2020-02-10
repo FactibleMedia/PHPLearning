@@ -8,7 +8,7 @@
 
     $semana=array("Lunes", "Martes", "Miércoles", "Jueves"); // Otra opción para la Sintáxis de un array indexado
 
-    $datos=array("Nombre"=>"Fede","Apellido"=>"Martínez","Edad"=>"33"); //Sintáxis de un array asociativo.
+    $datos=array("Nombre"=>"Fede","Apellido"=>"Martínez","Edad"=>"36"); //Sintáxis de un array asociativo.
 
     $datos["País"]="Colombia"; // Agregando un elemento más a un array asociativo.
 
@@ -47,13 +47,14 @@
                                     "Porcina"=>"Pata Cerdo")
                     );
     
-    echo $alimentos["Carne"]["Vacuna"] . "</br></br>";
+    echo $alimentos["Carne"]["Vacuna"] . "</br></br>"; //Mostrar elementos específicos de un array en pantalla.
+    
 
-    foreach($alimentos as $tipo_alimento => $clase_tipo_alimento) { // Este método es desarrollado para desglosar y mostrar en pantalla un array de 2 dimensiones.
+    foreach($alimentos as $tipo_alimento => $clase_tipo_alimento) { // Este método es desarrollado para desglosar y mostrar en pantalla un array de 2 dimensiones.Se crean 2 variables para identificar los elementos de la primera y segunda dimensión del array.
         
-        echo "El tipo de alimento es $tipo_alimento, sus clases y su procedencia son las siguientes:</br>";
+        echo "El tipo de alimento es $tipo_alimento, sus clases y su procedencia son las siguientes:</br>"; // Llama los elementos de la primera dimensión del array.
         
-        while( list($clase_a,$procedencia) = each($clase_tipo_alimento) ) {
+        while( list($clase_a,$procedencia) = each($clase_tipo_alimento) ) { //Este método sirve para desglosar o mostrar los elementos de la segunda dimensión. Se crean variables/nombres identificativos/as para identificar los elementos de la segunda dimensión.
             
             echo "· La clase de $tipo_alimento es $clase_a y su procedencia es el(la) $procedencia. </br>";
             
@@ -64,6 +65,11 @@
     }
 
     echo var_dump($alimentos);
+
+    echo "<pre>"; echo var_dump($alimentos); echo "<pre>";
         
-        //asdsad
+    echo var_export($alimentos, true); // La  función predefinida "var_export" es una alternativa al "var_dump"
+
+    highlight_string("<?php\n\$data =\n" . var_export($alimentos, true) . ";\n?>");
+
 ?>

@@ -8,9 +8,9 @@
     <p>&nbsp;</p>
     <form name="form1" method="post" action="">
         <label for="num1">Número 1</label>
-        <input type="text" name="num1" id="num1">
+        <input type="text" name="num1" id="num1" placeholder="0">
         <label for="num2">Número 2</label>
-        <input type="text" name="num2" id="num2">
+        <input type="text" name="num2" id="num2" placeholder="0">
         <label for="operación">Operaci&oacute;n</label>
         <select name="operacion" id="operacion">
             <option>Suma</option>

@@ -1,10 +1,10 @@
 <?php
-    if(isset($_POST["enviar"])) {
+    if(isset($_POST["enviar"])) { 
         
         $nombre=$_POST["name"];
         $edad=$_POST["age"];
         
-        /* if($edad <= 18) {
+        if($edad <= 18) {
             echo "Eres menor de edad";
         }else if($edad <= 40){
             echo "Eres jóven"; 
@@ -12,9 +12,11 @@
             echo "Eres maduro";
         }else{
             echo "Cu&iacutedate";
-        } */
+        }
         
-        /* echo $nombre=="Fez" && $edad=="lalilulelo" ? "Puedes acceder" : "No Puedes acceder"; */  // Línea de trabajo del condicional ternario
+        echo "</br>";
+        
+         echo $nombre=="Fez" && $edad=="lalilulelo" ? "Puedes acceder" : "No Puedes acceder" . "</br>";  // Línea de trabajo del operador/condicional ternario
         
         /* switch (true) { // Cuando es con llaves
             

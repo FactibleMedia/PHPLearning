@@ -13,7 +13,10 @@
         if(!strcmp("Suma",$calculo)) {
             global $numero1;
             global $numero2;
-            echo "El resultado es: " . ($numero1+$numero2);
+            
+            $resultado = $numero1+$numero2;
+            
+            echo "<h3>El resultado es: $resultado</h3>";
         }
         
         if(!strcmp("Resta",$calculo)) {
