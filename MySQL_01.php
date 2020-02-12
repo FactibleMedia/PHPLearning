@@ -13,7 +13,10 @@
 <body>
     <?php
         
-        // Conectarse a PHPmyAdmin con xampp en la terminal: cd /Applications/XAMPP/xamppfiles/bin;./mysql --user=root --password= 
+        // Conectarse a PHPmyAdmin con xampp en la terminal de MacOSX: cd /Applications/XAMPP/xamppfiles/bin;./mysql --user=root --password= 
+    
+        // Conectarse a PHPmyAdmin con xampp en el command de windows: cd yourlocation\xampp\mysql\bin\ 
+        // Luego mysql.exe –h localhost –u root -p
     
         require("MySQL_connection.php");
     
