@@ -35,7 +35,7 @@
     
         mysqli_set_charset($db_connect, "utf8"); // Permite usar la codificación UTF8 para mostrar caracteres latinos en el navegador al consultar la BD.
     
-        $db_query = "SELECT * FROM productos WHERE nombrearticulo LIKE '%'"; // Sentencia de consulta a la bd con Mysql
+        $db_query = "SELECT * FROM phplearn WHERE nombrearticulo LIKE '%'"; // Sentencia de consulta a la bd con Mysql
     
         $db_qresults = mysqli_query($db_connect, $db_query); // result set / record set.
     
