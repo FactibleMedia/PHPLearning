@@ -35,11 +35,13 @@
     
         mysqli_set_charset($db_connect, "utf8"); // Permite usar la codificación UTF8 para mostrar caracteres latinos en el navegador al consultar la BD.
     
-        $db_query = "SELECT * FROM phplearn WHERE nombrearticulo LIKE '%'"; // Sentencia de consulta a la bd con Mysql
+        //$db_query = "SELECT * FROM phplearn WHERE nombrearticulo LIKE '%'"; // Sentencia de consulta a la bd con Mysql
+    
+        $db_query = "SELECT * FROM user_data";
     
         $db_qresults = mysqli_query($db_connect, $db_query); // result set / record set.
     
-        /* echo "<table>"; 
+        echo "<table>"; 
         
         while($row=mysqli_fetch_row($db_qresults)) { // Leer y mostrar en pantalla el Array del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
             
@@ -53,11 +55,11 @@
             echo "</tr>";
         }
     
-        echo "</table>"; */
+        echo "</table>";
     
-        echo "<table>";
+        // echo "<table>";
         
-        while($row=mysqli_fetch_array($db_qresults, MYSQL_ASSOC)) { // Leer y mostrar en pantalla el Array ASOCIATIVO del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
+        /* while($row=mysqli_fetch_array($db_qresults, MYSQL_ASSOC)) { // Leer y mostrar en pantalla el Array ASOCIATIVO del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
             
             echo "<tr>";    
             echo "<td>" . $row['CODART'] . "</td>";
@@ -68,7 +70,7 @@
     
         echo "</table>";
     
-        mysqli_close($db_connect);
+        mysqli_close($db_connect); */
         
         // CREATE TABLE PRODUCTOS
         
