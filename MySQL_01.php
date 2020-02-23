@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>MYSQL - Conexión BD</title>
     
     
@@ -35,13 +35,15 @@
     
         mysqli_set_charset($db_connect, "utf8"); // Permite usar la codificación UTF8 para mostrar caracteres latinos en el navegador al consultar la BD.
     
+        
+    
         //$db_query = "SELECT * FROM phplearn WHERE nombrearticulo LIKE '%'"; // Sentencia de consulta a la bd con Mysql
     
-        $db_query = "SELECT * FROM user_data";
+        $db_query = "SELECT * FROM PRODUCTOS";
     
         $db_qresults = mysqli_query($db_connect, $db_query); // result set / record set.
     
-        echo "<table>"; 
+        echo "<table><tr><td>SERIAL</td><td>SECCIÓN</td><td>ITEM</td><td>PRECIO</td><td>FECHA</td><td>IMPORTADO</td><td>PAÍS</td><td>FOTO</td></tr>"; 
         
         while($row=mysqli_fetch_row($db_qresults)) { // Leer y mostrar en pantalla el Array del result set hasta que no encuentre datos. Quiere decir que mostrará todos los datos de la base de datos.
             
