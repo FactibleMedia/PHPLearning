@@ -1,6 +1,6 @@
 <?php
         
-    // Conectarse a PHPmyAdmin con xampp en la terminal: cd /Applications/XAMPP/xamppfiles/bin;./mysql --user=root --password= 
+    // Conectarse a PHPmyAdmin con xampp en la terminal: cd /Applications/XAMPP/xamppfiles/bin;./mysql --user=root --password=
 
     $id=$_GET["id"];
     $sec=$_GET["sec"];
@@ -27,7 +27,9 @@
 
     mysqli_set_charset($db_connect, "utf8"); // Permite usar la codificación UTF8 para mostrar caracteres latinos en el navegador al consultar la BD.
 
-    $db_query = "INSERT INTO productos (CODART,SECCION,NOMBREARTICULO,PRECIO,FECHA,IMPORTADO,PAISDEORIGEN) VALUES ('$id','$sec','$art','$price','$date','$imp','$country')"; // Sentencia de consulta a la bd con Mysql
+    // ------------------------------------------------------------------
+
+    $db_query = "INSERT INTO productos (CÓDIGOARTÍCULO,SECCIÓN,NOMBREARTÍCULO,PRECIO,FECHA,IMPORTADO,PAÍSDEORIGEN) VALUES ('$id','$sec','$art','$price','$date','$imp','$country')"; // Sentencia de consulta a la bd con Mysql
 
     $db_qresults = mysqli_query($db_connect, $db_query); // result set / record set.
 
