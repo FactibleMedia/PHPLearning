@@ -18,12 +18,16 @@
             }
 
             mysqli_select_db ($db_connect, $db_name) or die ("No se encuentra la Base de Datos"); // Conecta y selecciona una BD
-
+            
             mysqli_set_charset($db_connect, "utf8"); // Permite usar la codificación UTF8 para mostrar caracteres latinos en el navegador al consultar la BD.
             
             //----------------------------------------------------------------
 
-            $db_query = "SELECT * FROM productos WHERE nombreartículo LIKE '%$searchs%'"; // Sentencia de consulta a la bd con Mysql
+            //$db_query = "SELECT * FROM productos WHERE nombreartículo LIKE '%$searchs%'"; // Sentencia de consulta a la bd con Mysql
+            
+            $db_query = "SELECT * FROM productos WHERE nombreartículo LIKE '$searchs'";
+            
+            echo "$db_query <br><br>";
 
             $db_qresults = mysqli_query($db_connect, $db_query); // result set / record set.
 
