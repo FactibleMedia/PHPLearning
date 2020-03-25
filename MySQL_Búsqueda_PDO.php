@@ -18,11 +18,13 @@
             
             $base->exec("SET CHARACTER SET utf8");
             
-            $bd_query = "SELECT NOMBREARTÍCULO, SECCIÓN, PRECIO, PAÍSDEORIGEN FROM productos WHERE NOMBREARTÍCULO = ?";
+            //$bd_query = "SELECT NOMBREARTÍCULO, SECCIÓN, PRECIO, PAÍSDEORIGEN FROM productos WHERE NOMBREARTÍCULO = ?";
+            
+            $bd_query = "SELECT NOMBREARTÍCULO, SECCIÓN, PRECIO, PAÍSDEORIGEN FROM productos WHERE NOMBREARTÍCULO = :n_art";
             
             $bd_result = $base->prepare($bd_query); // Almacenado el PDO Statement (PHP Data Object Statement).
             
-            $bd_result->execute(array($search));
+            $bd_result->execute(array(":n_art"=>$search));
             
             while($register=$bd_result->fetch(PDO::FETCH_ASSOC)) {
                 
