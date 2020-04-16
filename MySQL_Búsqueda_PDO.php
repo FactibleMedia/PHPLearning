@@ -8,7 +8,7 @@
 <body>
     <?php
     
-        $search = $_GET["search"];
+        $search = $_POST["search"];
     
         try {
 

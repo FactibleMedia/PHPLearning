@@ -3,7 +3,7 @@
         table { background-color: darkblue; margin: auto; border-collapse: collapse; }
         td { border: 1px solid green; color: #fff; font-family: 'Consolas', Arial, sans-serif;font-size: 14px; padding: 4px 10px; background-color: darkblue; border-collapse: collapse; }
         
-</style>
+</style> 
         <?php
 
         //  Método para crear consultas preparadas //
@@ -81,7 +81,5 @@
             
             mysqli_stmt_close($preparation);
         }
-        
-        
-        
+           
 ?>

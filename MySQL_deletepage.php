@@ -1,7 +1,7 @@
 <style>
         table { border: 1px solid #000; }
         td { border: 1px solid #000; }
-    </style>
+    </style> 
      
 <?php
         

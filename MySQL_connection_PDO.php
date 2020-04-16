@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Conexiòn a BD por Método PDO</title>
-    
+     ¿
     <style>
         form { text-align: center; }
         table { background-color: darkblue; margin: auto; border-collapse: collapse; }
