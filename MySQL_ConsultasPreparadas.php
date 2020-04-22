@@ -14,7 +14,7 @@
         <input type="submit" name="sending" id="Buscar" value="Buscar">
     </form>
 </body>
-
+ 
 <?php
    //  Método para crear consultas preparadas //
     

@@ -24,7 +24,7 @@
 
         // mysqli_set_charset ($bd_connect, "UTF8"); Estilo procedimental
 
-        $bd_connect->set_charset("utf8"); // Estilo Orientado a Objetos
+        $bd_connect->set_charset("utf8"); // Estilo Orientado a Objetos, la conexión llama a la función o método set_charset
         
         $bd_query = "SELECT * FROM productos";
         

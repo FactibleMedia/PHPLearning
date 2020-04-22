@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inyección SQL</title>
+    <title>Inyección SQL</title> 
 </head>
 <body>
     <h1>Eliminando Registros (Inyección SQL)</h1>
