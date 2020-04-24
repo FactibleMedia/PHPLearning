@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Buscar país</h1>
-    <form action="MySQL_prepared_queries.php" method="get" name="datos_usuario" id="datos_usuario">
+    <form action="PREPQ_prepared_queries.php" method="get" name="datos_usuario" id="datos_usuario">
         <label for="">Introduce el país</label>
         <input type="text" name="search" id="search">
         <input type="submit" name="sending" id="Buscar" value="Buscar">

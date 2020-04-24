@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Registro de artículos nuevos</h1>
-    <form action="MySQL_insertitem_pqueries.php" method="get" name="datos_usuario" id="datos_usuario">
+    <form action="PREPQ_insertitem.php" method="get" name="datos_usuario" id="datos_usuario">
         <label for="">Código</label><br>
         <input type="text" name="id" id="id"><br>
         <label for="">Sección</label><br>

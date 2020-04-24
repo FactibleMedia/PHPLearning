@@ -6,7 +6,7 @@
     
 </head>
 <body>
-    <form action="MySQL_Búsqueda_PDO.php" method="post">
+    <form action="PDO_Búsqueda.php" method="post">
         <label for="">Buscar: <input type="text" name="search" id="search"></label>
         <input type="submit" name="sending" value="Buscar">
     </form>

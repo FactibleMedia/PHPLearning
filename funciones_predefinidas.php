@@ -16,7 +16,7 @@
             
             $resultado = $num1 + $num2; // Ejemplo de casting de PHP
             
-            return $resultado . "</br></br>"; // La función "return" retorna un valor pero no lo devuelve en pantalla
+            return $resultado . "</br></br>"; // La función (en realidad no es una función sino un constructor del programa) "return" retorna un valor pero no lo devuelve en pantalla
         }
     
         echo suma(5396,8927); // Ejecutando una función con paso de parametros.

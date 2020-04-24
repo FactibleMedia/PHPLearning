@@ -69,7 +69,7 @@
         }
     }
 
-    class Moto extends Camion { // HERENCIA EN CLASES: Hereda de una súper clase o clase padre todos las proìedades y funcionalidades.
+    class Moto extends Camion { // HERENCIA EN CLASES: Hereda de una súper clase o clase padre todos las propiedades y funcionalidades.
             
         function Moto() { // CONSTRUCTOR
             
