@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1>Introduce tus datos</h1>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?> " method="post">
+        <table>
+            <tr>
+                <td>User</td>
+                <td><input type="text" name="user"></td>
+            </tr>
+            <tr>
+                <td>Pass</td>
+                <td><input type="password" name="pass"></td>
+            </tr>
+            <tr>
+                <td>Recordar</td>
+                <td><input type="checkbox" name="rememberme"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="send" value="Acceder"></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
