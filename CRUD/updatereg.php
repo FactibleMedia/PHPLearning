@@ -52,16 +52,16 @@
    
    <?php
     
-        include("connection.php");
+        include("connection.php"); // Llamamos a la conexión
         
-        if(!isset($_POST["updatereg"])) {
+        if(!isset($_POST["updatereg"])) { // Creamos un if para decirle que si no ha presionado el boton de actualizar capture los datos que se han pasado por la url a través del botón actualizar de la página index por el método GET.
             
             $id = $_GET["Id"];
             $fname = $_GET["fnam"];
             $lname = $_GET["lnam"];
             $address = $_GET["Dir"];    
             
-        } else {
+        } else { // Si ha presionado el botón actualizar también llama los datos que se han pasado por la url pero en este caso se hace una consulta de editar o actualizar esos datos en la url por el método POST...
             
             $id = $_POST["id"];
             $fname = $_POST["fnam"];
@@ -70,16 +70,16 @@
             
             $db_query = "UPDATE users_data SET fname=:names, lname=:lnames, address=:addresses WHERE id=:idf";
             
-            $result = $connection->prepare($db_query);
+            $result = $connection->prepare($db_query); // Luego preparamos esa consulta.
             
-            $result->execute(array(":idf"=>$id, ":names"=>$fname, ":lnames"=>$lname, ":addresses"=>$address));
+            $result->execute(array(":idf"=>$id, ":names"=>$fname, ":lnames"=>$lname, ":addresses"=>$address)); //Ejecutamos la consulta y le pasamos los datos a actualizar a los marcadores que se encuentran dentro del array.
             
-            header("Location:index.php");
+            header("Location:index.php"); // Redirigimos a la página index con el dato actualizado.
         }
     ?>
     
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="updform" method="post">
-        <input type="hidden" name="id" value="<?php echo $id ?>">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="updform" method="post"> <!-- Cuando se pulse el botón de actualizar enviamos los datos del formulario, en este caso lo enviamos a la misma página. -->
+        <input type="hidden" name="id" value="<?php echo $id ?>"> <!-- Incluimos dentro del input como un dato de vista de placeholder o value el dato correspondiente que se va actualizar -->
         <input type="text" name="fnam" value="<?php echo $fname ?>">
         <input type="text" name="lnam" value="<?php echo $lname ?>">
         <input type="text" name="address" value="<?php echo $address ?>">
