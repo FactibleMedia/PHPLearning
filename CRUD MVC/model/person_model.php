@@ -1,10 +1,10 @@
 <?php 
     
-    class Products_model {
+    class Personas_model {
         
         private $database;
         
-        private $products;
+        private $personas;
         
         
         public function __construct(){
@@ -13,20 +13,22 @@
             
             $this->database=Connect::connection(); // Utilizamos -this- porque estaoms dentro de la clase y en la variable -database- llamamos a la clase -Conectar - con el método -connection-
             
-            $this->products=array(); // Le decimos a la variable -products- que es un array
+            $this->personas=array(); // Le decimos a la variable -products- que es un array
         }
         
-        public function get_products() { // Método para obtener los productos.
+        public function get_personas() { // Método para obtener los productos.
             
-            $db_query = $this->database->query("SELECT * FROM PRODUCTOS");
+            require("pagination_model.php");
+            
+            $db_query = $this->database->query("SELECT * FROM users_data LIMIT $pages_start, $pagesize");
             
             while($rows = $db_query->fetch(PDO::FETCH_ASSOC)) {
                 
-                $this->products[]=$rows;
+                $this->personas[]=$rows;
                 
             }
             
-            return $this->products;
+            return $this->personas;
             
         }
     }

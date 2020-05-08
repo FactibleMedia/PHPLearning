@@ -113,7 +113,7 @@
             
             $totalpages = ceil($row_cant / $pagesize); // 16. Esta variable sirve para calcular el número de páginas. Con la función -ceil- redondeamos el resultado.
     
-            // ---------------- /// FIN PAGINACIÓN /// ---------------- //
+        // ---------------- /// FIN PAGINACIÓN /// ---------------- //
         
     
         $registers = $connection->query("SELECT * FROM users_data LIMIT $pages_start, $pagesize")->fetchAll(PDO::FETCH_OBJ); // Esta línea hace lo mismo que las dos anteriores comentadas.

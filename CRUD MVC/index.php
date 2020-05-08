@@ -67,11 +67,14 @@
     </style> 
 </head>
 <body>
-    <h1>MVC</h1>
+    <h1>CRUD MVC</h1>
+    <h2>[Create, Read, Update, Delete] <br> [Model View Controller]</h2> <br>
+    
+    <br>
     
     <?php
     
-        require_once("controller/products_controller.php");
+        require_once("controller/person_controller.php");
     
     ?>
     
