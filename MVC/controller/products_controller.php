@@ -2,14 +2,11 @@
 
     require_once("model/products_model.php");
     
-    $products = new Products_model();
+    $product = new Products_model(); // Nueva instancia de la clase.
 
-    $products_array = $products->get_products();
+    $products_array = $product->get_products();
     
     
     require_once("views/products_view.php");
     
-    
-    
-
 ?>
