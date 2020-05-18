@@ -18,79 +18,15 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 
+                <?php include("views/form_post.php") ?>
+
             </div>
             <div class="col-sm-2"></div>
         </div>
     </div>
     
-    <?php
     
-        $connection = mysqli_connect("localhost", "root", "", "blog_bbdd");
     
-        if (!$connection) {
-            echo "La conexión ha fallado" . mysqli_error();
-            exit();
-        }
-    
-        if($_FILES['imaged']['error']) {
-            
-            switch ($_FILES['imaged']['error']){
-                    
-                case 1:
-                    echo "El tamaño excede los límites del servidor";
-                    break;
-                    
-                case 2:
-                    echo "El tamaño del archivo excede los 2Mb";
-                    break;
-                    
-                case 3:
-                    echo "La subida fue interrumpida";
-                    break;
-                    
-                case 4:
-                    echo "No se ha enviado ningun archivo";
-                    break;
-                    
-            }
-            
-        } else {
-            
-            echo "¡Entrada publicada exitosamente! </br>";
-            
-            if (isset($_FILES['imaged']['name']) && ($_FILES['imaged']['error'] == UPLOAD_ERR_OK)) {
-                
-                $path_destiny = "img/";
-                
-                move_uploaded_file($_FILES['imaged']['tmp_name'], $path_destiny . $_FILES['imaged']['name']);
-                
-                echo "El archivo <strong>" . $_FILES['imaged']['name'] . "</strong> se ha copiado en el directorio de imágenes.";
-                
-            } else {
-                
-                echo "El archivo no se ha podido mover al directorio de imágenes.";
-                
-            }
-            
-        }
-    
-        $title = $_POST['title'];
-        $content = $_POST['content'];
-        $date = date("y-m-d H:i:s");
-        $image = $_FILES['imaged']['name'];
-        
-        $bd_query = "INSERT INTO content (title, date, comment, image) VALUES ('" . $title . "', '" . $date . "', '" . $content . "', '" . $image . "')";
-        
-        $result = mysqli_query($connection, $bd_query);
-    
-        mysqli_close($connection);
-    
-        echo "</br> ¡Se ha agregado el comentario con éxito! <br>";
-    ?>
-    
-    <a href="form_post.php">Añadir una nueva entrada</a>
-    
-    <a href="blog.php">Ir al Blog</a>
     
 
     <!-- Optional JavaScript -->

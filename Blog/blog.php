@@ -35,6 +35,9 @@
                     if($result = mysqli_query($connection, $db_query)) {
 
                         while ($row = mysqli_fetch_assoc($result)){
+                            
+                            // echo date_default_timezone_get();
+                            
 
                             echo "<div class='card mb-3'>";
                             
@@ -46,7 +49,7 @@
                             
                             echo "<div class='card-body'>
                                     <h5 class='card-title'>" . $row['title'] . "</h5>
-                                    <p class='card-text'>" . $row['comment'] . "</p>
+                                    <p class='card-text'>" . $row['content'] . "</p>
                                     <p class='card-text'><small class='text-muted'>Publicado el " . $row['date'] . "</small></p>
                                 </div>
                             </div>";

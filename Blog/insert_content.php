@@ -79,7 +79,7 @@
         $date = date("y-m-d H:i:s");
         $image = $_FILES['imaged']['name'];
         
-        $bd_query = "INSERT INTO content (title, date, comment, image) VALUES ('" . $title . "', '" . $date . "', '" . $content . "', '" . $image . "')";
+        $bd_query = "INSERT INTO content (title, date, content, image) VALUES ('" . $title . "', '" . $date . "', '" . $content . "', '" . $image . "')";
         
         $result = mysqli_query($connection, $bd_query);
     

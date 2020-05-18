@@ -29,7 +29,7 @@
                         <textarea name="content" id="" cols="30" rows="4" placeholder="Texto de la entrada" class="form-control"></textarea>
                         <small class="form-text text-muted">Exprese todo lo que sienta.</small>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"> 
                         <small class="text-danger">* Seleccione un archivo no mayor a 2Mb</small>
                         <input type="file" name="imaged" class="form-control-file form-control-sm"> 
                     </div>

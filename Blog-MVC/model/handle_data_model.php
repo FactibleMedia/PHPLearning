@@ -1,6 +1,6 @@
 <?php
     
-    inlude ("publication_model.php");
+    include_once ("publication_model.php"); // Se invoca al archivo con el objeto(clase) a manipular para poder usar sus propiedades y métodos. 
 
     class Handle_publications {
         
@@ -28,7 +28,7 @@
             
             while ($register = $result->fetch(PDO::FETCH_ASSOC)) {
                 
-                $publication = new Publication_model();
+                $publication = new Publication_object();
                 
                 $publication->set_id($register["id"]);
                 $publication->set_title($register["title"]);
@@ -46,9 +46,9 @@
             
         }
         
-        public function set_Publications(Publication_model $publication) {
+        public function set_Publications(Publication_object $publication) {
             
-            $publications_query = "INSERT INTO content (title, date, comment, image) VALUES ('" . $publication->get_title() . "', '" . $publication->get_date() . "', '" . $publication->get_content() ."', '" . $publication->get_image . "')";
+            $publications_query = "INSERT INTO content (title, date, content, image) VALUES ('" . $publication->get_title() . "', '" . $publication->get_date() . "', '" . $publication->get_content() . "', '" . $publication->get_image() . "')";
             
             $this->connection->exec($publications_query);
             

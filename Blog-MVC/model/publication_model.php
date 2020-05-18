@@ -1,12 +1,12 @@
-<?php
+<?php // Construye elementos u objetos de tipo blog
 
-    class Publication_model  {
+    class Publication_object  {
         
-        // Propiedades del objeto blog
+        // Propiedades del objeto publication
         private $id;        
-        private $title;
         private $da_te;
-        private $content;
+        private $title;
+        private $content; 
         private $image;
         
         
@@ -16,8 +16,8 @@
             return $this->id;            
         }
         
-        public function set_id($id) {  // Esteblece el valor de la propiedad $id          
-            $this->id = $id;            
+        public function set_id($ids) {  // Esteblece el valor de la propiedad $id          
+            $this->id = $ids;            
         }
         //---
         
@@ -25,17 +25,17 @@
             return $this->title;            
         }
         
-        public function set_title($title) {            
-            $this->title = $title;            
+        public function set_title($titles) {            
+            $this->title = $titles;            
         }
         //---
         
         public function get_date(){            
             return $this->da_te;            
         }
-        
-        public function set_date($da_te) {            
-            $this->da_te = $da_te;            
+         
+        public function set_date($dates) {            
+            $this->da_te = $dates;            
         }
         //---
         
@@ -43,8 +43,8 @@
             return $this->content;            
         }
         
-        public function set_content($content) {            
-            $this->content = $content;            
+        public function set_content($contents) {            
+            $this->content = $contents;            
         }
         //---
         
@@ -52,8 +52,8 @@
             return $this->image;            
         }
         
-        public function set_image($image) {            
-            $this->image = $image;            
+        public function set_image($images) {            
+            $this->image = $images;            
         }
         //---
     }

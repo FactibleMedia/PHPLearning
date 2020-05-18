@@ -20,45 +20,11 @@
 
                 <h1 class="display-4 text-primary">Blog de Fez</h1>
                 <p>A continuación las entradas de mi blog :)</p>
+                
+                <a href="insert_content.php"><p  class="text-success"><strong>- Publicar una nueva entrada -</strong></p></a>
+                <hr>
 
-                <?php
-    
-                     $connection = mysqli_connect("localhost", "root", "", "blog_bbdd");
-
-                    if (!$connection) {
-                        echo "La conexión ha fallado" . mysqli_error();
-                        exit();
-                    }
-
-                    $db_query = "SELECT * FROM content ORDER BY date DESC";
-
-                    if($result = mysqli_query($connection, $db_query)) {
-
-                        while ($row = mysqli_fetch_assoc($result)){
-
-                            echo "<div class='card mb-3'>";
-                            
-                                if($row['image']!="") {
-            
-                                    echo "<img src='img/" . $row['image'] . "'width='100%' class='card-img-top' alt='...'>";
-
-                                }
-                            
-                            echo "<div class='card-body'>
-                                    <h5 class='card-title'>" . $row['title'] . "</h5>
-                                    <p class='card-text'>" . $row['comment'] . "</p>
-                                    <p class='card-text'><small class='text-muted'>Publicado el " . $row['date'] . "</small></p>
-                                </div>
-                            </div>";
-                            
-                            echo "<hr>";
-
-                        }
-
-                    }
-
-                ?>
-
+                <?php include("views/publications_view.php") ?>
 
             </div>
             <div class="col-sm-2"></div>
