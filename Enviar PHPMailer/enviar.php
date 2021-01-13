@@ -3,12 +3,11 @@
     $correo = $_POST["correo"];
     $Asunto = $_POST["asunto"];
     $mensaje = $_POST["mensaje"];
-    $file = $_POST["archivo"];
     $body = "Mensaje enviado por: " . $correo . "<br>
     Asunto: " . $Asunto . "<br>
-    Mensaje: <br>" .
-    $mensaje
-    ;
+    Mensaje: <br>" . $mensaje;
+    $file = $_FILES["archivo"];
+    
     
     // Import PHPMailer classes into the global namespace
     // These must be at the top of your script, not inside a function
@@ -47,7 +46,7 @@
 
         // Attachments
         // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-        $mail->addAttachment($file);         // Add attachments
+        $mail->addAttachment($file["tmp_name"], $file["name"]);         // Add attachments
         // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
         // Content

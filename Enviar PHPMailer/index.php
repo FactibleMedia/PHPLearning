@@ -5,7 +5,7 @@
         <title>Envío de correo electrónico</title>
     </head>
     <body>
-        <form method="post" action="enviar.php" name="enviar" enctype="ultipart/form-data">
+        <form method="post" action="enviar.php" name="enviar" enctype='multipart/form-data'>
             <label for="">Correo"</label>
             <input name="correo" id="correo" type="text" />
             <br>
@@ -26,3 +26,4 @@
 
     </body>
 </html>
+
